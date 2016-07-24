@@ -1,0 +1,159 @@
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+header {
+    background-color: #000000;
+    font-weight: 600;
+    color: white;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.container span {
+    color:#30d1b4;
+}
+
+nav {
+    float: right;
+    font-weight: 700;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+nav ul li {  
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:white;
+    margin: 0 5px;
+}
+
+
+#dropdown {
+    display: none;
+    position: absolute;
+    font-weight: 400;
+}
+
+ nav ul li:hover #dropdown {
+    display: block;
+}
+
+#black {
+    width: 100px;
+    height: 70px;
+    background-color: black;
+    position: relative;
+}
+
+#triangle {
+    width: 1px;;
+    height: 1px;
+    border: 1px solid black;
+    position: absolute;
+    left: 50px;
+    top: -20px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+#form  {
+    position: relative;
+    color: #9c9c9c;
+    
+}
+
+
+form textarea {
+    width: 700px;
+    height: 200px;
+    resize: none;
+    font-size: 33px;
+    padding: 7px;
+    margin: 9px 0;
+    font-family: "Raleway";
+    
+}
+
+
+form input[type=text] {
+    width: 560px;
+    height: 60px;
+    font-size: 33px;
+    padding: 5px;
+    border-width: 1px;
+    margin: 9px 0;
+    font-family: "Raleway";
+}
+
+
+form input[type=submit] {
+    background-color: #26c7a9;
+    border-radius: 20px;
+    width: 180px;
+    height: 70px;
+    color: #fffefa;
+    font-size: 40px;
+    font-family: "Raleway";
+    position: absolute;
+    bottom: -70px;
+    left:-5px;
+    
+}
+
+#answer {
+    position: absolute;
+    bottom: -45px;
+    left: 195px;
+}
+
+#tick {
+    position: absolute;
+    top: 200px;
+    right: 70px;
+}
+
+
+footer {
+    margin-top: 120px;
+    margin-bottom: 40px;
+    color: #9c9c9c;
+    
+}
+
+.container div {
+    display: inline-block;
+}
+
+#logo {
+   margin-left: 300px;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+#sit {
+    font-weight: 700;
+    margin-left: 50px;
+    
+}
+
+#sit span {
+     color: #9c9c9c;
+    font-weight: 1000;
+}
