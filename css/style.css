@@ -227,6 +227,7 @@ h3::after {
     position: absolute;
     top: 20px;
     left: -1px;
+    
 }
 
 #plans {
@@ -239,7 +240,6 @@ h3::after {
     height: 490px;
     width: 33%;
     border: 2px solid #c2c2c2;
-   background-color: #f7f7f7;
     text-align: center;
     position: relative;
     padding: 20px;
@@ -250,7 +250,7 @@ h3::after {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 20px solid white;
+    border: 20px solid #f7f7f7;
     position: absolute;
     background-color: #c2c2c2;
     box-shadow: 0 0 0 2px grey;
@@ -260,12 +260,35 @@ h3::after {
 }
 
 
-.white {
+.white h2{
+    color: #25c49f;
+}
+
+.blue h2 {
+    color: #f7ffff;
     
 }
 
-.blue{
-    
+.blue {
+    background-color: #26c7a9;
+}
+
+.blue .circle {
+    background-color: #f7ffff;
+    border-color:#26c7a9 ;
+}
+
+.blue .price .numbers, .blue .price .currency {
+    color: #26c7a9;;
+}
+
+.blue .join {
+    background-color: #f7ffff;
+    color: #26c7a9;
+}
+
+.blue .price {
+    background-color: #f7ffff;
 }
 
 .join {
@@ -278,7 +301,7 @@ h3::after {
     position: absolute;
     bottom: 20px;
     left: 70px;
-    color: white;
+    color:#f7ffff;
     padding: 7px;
     font-size: 15px;
 }
@@ -307,25 +330,140 @@ h3::after {
     font-size: 14px;
 }
 
-.delivery {
-    width: 318px;
-    height: 40px;
-    background-color: #e3e3e3;
-    font-size: 20px;
-    color: #949494;
+.plan table {
+    width: 320px;
     position: absolute;
-    top:250px;
-    left: -1px;
+    top: 250px;
+    left:-1px;
 }
 
-.service {
-    width: 318px;
-    height: 40px;
+tr {
+    height: 50px;
+}
+
+table tr:nth-child(2n+1){
+    background-color: #e3e3e3;
+}
+
+table tr:nth-child(2n+2){
     background-color: #f0f0f0;
-    font-size: 20px;
-    color: #949494;
-    position: absolute;
-    top:290px;
-    left: -1px;
+}
+
+.blue table tr:nth-child(2n+1){
+    background-color: #f0f0f0;
+}
+
+.blue table tr:nth-child(2n+2){
+    background-color: #e3e3e3;
+}
+
+form input {
+    border-color: #26c7a9;
+}
+
+
+form textarea {
+    border-color: #26c7a9;
+    width: 558px;
+    height: 200px;
+    resize: none;
+    font-size: 33px;
+    padding: 7px;
+    margin: 9px 0;
+    font-family: "Raleway";
     
+}
+
+
+form input[type=text] {
+    width: 560px;
+    height: 60px;
+    font-size: 33px;
+    padding: 5px;
+    border-width: 1px;
+    margin: 9px 0;
+    font-family: "Raleway";
+}
+
+
+form input[type=submit] {
+    background-color: #26c7a9;
+    border-radius: 20px;
+    width: 320px;
+    height: 70px;
+    color: #fffefa;
+    font-size: 40px;
+    margin-left: 650px;
+    margin-top: -90px;
+}
+
+input[type="checkbox"] {
+      width: 40px;
+      height:40px;
+      position: relative;
+      z-index: 0;
+   
+    
+}
+input[type="checkbox"] + label span {
+    width:44px;
+    height:44px;
+    border:1px solid #e3e3e3;
+    background:url(../images/form_ok.jpg) left top no-repeat;
+    position: absolute;
+    right: 290px;
+    top:3px;
+    z-index: 1;
+  
+   }
+ 
+#check {
+    position: absolute;
+    right: 40px;
+    top:300px;
+    color: #e3e3e3;
+    font-size: 20px;
+        
+}
+
+
+#form {
+    position: relative;
+}
+
+#redChair {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    
+}
+
+footer {
+    margin-top: 70px;
+    margin-bottom: 40px;
+     color: #9c9c9c;
+    
+}
+
+.container div {
+    display: inline-block;
+}
+
+#logo {
+   margin-left: 300px;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+#sit {
+    font-weight: 700;
+    margin-left: 50px;
+    
+}
+
+#sit span {
+     color: #9c9c9c;
+    font-weight: 1000;
 }
