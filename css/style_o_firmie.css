@@ -67,74 +67,38 @@ nav ul li a {
     top: -20px;
 }
 
-h3 {
+
+section h2 {
     font-size: 30px;
 }
 
-#form  {
-    position: relative;
-    color: #9c9c9c;
+#block div {
+    display:block;
+}
+
+.dropdown{
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 800;
+    width: 800px;
+    height: 80px;
+    border: 1px solid white;
+    background-color: #30d1b4;
+    color: white;
+    padding:20px 5px 2px 5px;
+    
+}
+.dropdown span {
+    color:white;
+    font-size: 36px;
     
 }
 
-
-form textarea {
-    width: 700px;
-    height: 200px;
-    resize: none;
-    font-size: 33px;
-    padding: 7px;
-    margin: 9px 0;
-    font-family: "Raleway";
-    
-}
-
-
-form input[type=text] {
-    width: 560px;
-    height: 60px;
-    font-size: 33px;
-    padding: 5px;
-    border-width: 1px;
-    margin: 9px 0;
-    font-family: "Raleway";
-}
-
-
-form input[type=submit] {
-    background-color: #26c7a9;
-    border-radius: 20px;
-    width: 180px;
-    height: 70px;
-    color: #fffefa;
-    font-size: 40px;
-    font-family: "Raleway";
-    position: absolute;
-    bottom: -70px;
-    left:-5px;
-    
-}
-
-#answer {
-    position: absolute;
-    bottom: -45px;
-    left: 195px;
-}
-
-#tick {
-    position: absolute;
-    top: 200px;
-    right: 70px;
-}
-
-#form span {
-    color:red;
-}
 
 footer {
-    margin-top: 120px;
+    margin-top: 70px;
     margin-bottom: 40px;
-    color: #9c9c9c;
+     color: #9c9c9c;
     
 }
 
