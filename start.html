@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <title>Start</title>
     <link rel="stylesheet" href="css/style_start.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> </head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <script src="js/zad1.js"></script>
+    </head>
 
 <body>
     <header>
         <div class="container"> SIT <span>ON</span> CHAIR
             <nav>
                 <ul>
-                    <li> <a href="#">O FIRMIE </a>
-                        <ul id="dropdown">
+                    <li id="drop"> <a href="#" >O FIRMIE </a>
+                        <ul id="dropdown" class="invisible_menu">
                             <div id="dropmenu">
-                            <div id="black">
+                            <div id="rectangle">
                                 <div id="triangle"></div>
                                 <li><a href="#">Aktualności </a></li>
                                 <li><a href="#">Nasz team</a></li>
@@ -30,25 +32,37 @@
             </nav>
         </div>
     </header>
-    <section id="one">
-        <div class="container" id="main"> <a href="#" id="leftarrow"> &lt; </a>
+    <section id="first_section" >
+        <div class="container" id="main"> 
+            <a href="#" id="leftarrow"> &lt; </a>
             <div id="content">
-                <div id="picture"> <img src="images/black_chair.png"> </div>
-                <div id="adv">
+                <div id="picture">
+                    <ul>
+                  <li class="show"><img src="images/black_chair.png"> </li>
+                         <li class="show"><img src="images/red.png"> </li>
+                         <li class="show"><img src="images/orange.png"> </li>
+                        </ul>
+                        </div>
+                <div id="info">
                     <h1>SIT <span>ON </span>OUR <span>CHAIR</span></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p> <a href="#">ZOBACZ WIĘCEJ</a> </div>
-            </div> <a href="#" id="rightarrow"> &gt; </a> </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p> <a href="#">ZOBACZ WIĘCEJ</a> 
+                </div>
+            </div>
+            <a href="#" id="rightarrow"> &gt; </a> 
+        </div>
     </section>
     <section>
-        <div class="container" id="two">
-            <div><img src="images/box1_img.jpg">
+        <div class="container" id="models">
+            <div>
+                <img src="images/box1_img.jpg">
                 <div class="label"><span>Chair CLAIR</span> </div>
             </div>
-            <div><img src="images/box2_img.jpg">
+            <div>
+                <img src="images/box2_img.jpg">
                 <div class="label"><span>Chair MARGARITA</span> </div>
             </div>
-            <div id="text">
-                <p id="head">Finds all inputs</p>
+            <div id="inputs">
+                <p id="header">Finds all inputs</p>
                 <p> Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.
                     <br>
                     <br> Notice there is no change when clicking the checkboxes since no click events have been linked.</p>
@@ -58,7 +72,7 @@
     <section id="pricelist">
         <div class="container">
             <h3>CENNIK</h3>
-            <div id="plans">
+            <div id="all_plans">
                 <div class="plan white">
                     <div class="circle"> </div>
                     <h2>BASIC PLAN</h2>
@@ -104,6 +118,82 @@
             </div>
         </div>
     </section>
+    <section class="application">
+    <div class="container">
+        <section class="choice_part inline">
+            <header class="application_section">
+                <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                
+            </header>
+
+            <div class="form">
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz rodzaj</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel model">
+                        <li data-price="200">Clair</li>
+                        <li data-price="250">Margarita</li>
+                        <li data-price="300">Selena</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz kolor</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel colors">
+                        <li>Czerwony</li>
+                        <li>Czarny</li>
+                        <li>Pomarańczowy</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz materiał</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel patterns">
+                        <li>Tkanina</li>
+                        <li>Skóra</li>
+                    </ul>
+                </div>
+                <div class="checkbox check-box">
+                    <input type="checkbox" id="transport" data-transport-price="200">
+                    <label for="transport">Transport</label>
+                </div>
+                <!--<div class="checkbox"></div>-->
+                <!--<span class="list_label inline_text">Transport</span>-->
+            </div>
+        </section>
+
+        <section class="image_part inline">
+            <img src="images/red_chair.png">
+        </section>
+
+        <section class="summary_part inline">
+            <header class="align_right">
+                <h3>PODSUMOWANIE</h3>
+               
+            </header>
+
+            <div class="summary_panel">
+                <div class="panel_left">
+                    <h4 class="Title">Twój fotel</h4>
+                    <span class="Color"></span>
+                    <span class="Pattern"></span>
+                    <span class="Transport"></span>
+                </div>
+                <div class="panel_right">
+                    <h4 class="title value"></h4>
+                    <span class="color value"></span>
+                    <span class="pattern value"></span>
+                    <span class="transport value"></span>
+                </div>
+                <div class="sum_label">SUMA</div>
+                <div class="sum"><strong></strong></div>
+            </div>
+            <a href="" class="orderbutton">ZAMAWIAM</a>
+        </section>
+    </div>
+</section>
+
+	
     <section>
     <div class="container" id="form">
         <h3>KONTAKT</h3> 
@@ -113,7 +203,7 @@
     </label>      
         <br>
     <label>
-    <input type="text" name="email" type="email" placeholder="email">
+    <input type="text" name="email" type="email" placeholder="Email">
     </label>   
         <br>
     <label>
@@ -133,7 +223,7 @@
     </section>
     <footer>
     <div class="container">
-   <div id="copy"> Copyright 2014 | All rights Reserved - Sit On Chair </div>
+    Copyright 2014 | All rights Reserved - Sit On Chair 
     <div id="logo">
         <a href="#" > <img src="images/flickr.png"> </a>
           <a href="#" ><img src="images/vimeo.png"> </a>
