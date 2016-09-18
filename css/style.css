@@ -198,8 +198,9 @@ nav ul li a {
 }
 
 .label {
-    width:329px;
+    width:310px;
     height:60px;
+    padding: 5px 10px;
     background-color: rgba(255,255,255, 0.4);
     position: absolute;
     right:10px;
@@ -235,14 +236,14 @@ nav ul li a {
 } 
 
 #inputs {
-    height: 240px;
+    height: 205px;
     border: 1px solid grey;
-    padding: 10px 10px;
-    top: -12px;
+    padding: 10px ;
+    top: -35px;
 }
 
 #inputs p {
-    font-size: 10x;
+    font-size: 14px;
     color:#737373;
 }
 
