@@ -71,23 +71,34 @@ drop.addEventListener("mouseout", function () {
     var list_arrow= document.querySelectorAll(".list_arrow");
     var list_panel= document.querySelectorAll(".list_panel");
     
-        list_arrow[0].addEventListener("click", function () {
+    list_arrow[0].addEventListener("click", function () {
+        list_panel[1].classList.remove("visible");
+        list_panel[2].classList.remove("visible");
         list_panel[0].classList.toggle("visible");
         })
     list_arrow[1].addEventListener("click", function () {
+        list_panel[0].classList.remove("visible");
+        list_panel[2].classList.remove("visible");
         list_panel[1].classList.toggle("visible");
         })
     list_arrow[2].addEventListener("click", function () {
+        list_panel[0].classList.remove("visible");
+        list_panel[1].classList.remove("visible");
         list_panel[2].classList.toggle("visible");
         })
+    
     
     var model=document.querySelector(".model");
    
         var model_choice=model.getElementsByTagName("li");
         
         for (var j=0; j<model_choice.length; j++) {
-          
+         
             model_choice[j].addEventListener("click", function () {
+                for (var i=0; i<list_panel.length; i++) {
+                list_panel[i].classList.remove("visible");
+                }
+                
                var model_inner=this.innerText;
                 
                var price= this.dataset.price;
@@ -97,22 +108,33 @@ drop.addEventListener("mouseout", function () {
                                     
                 var title=document.querySelector(".title");
                 title.innerText=price;
+                
+                var total=document.getElementById("total");
+                total.innerText=title.innerText;  
             })
         }
-    
-   var colors=document.querySelector(".colors");
+  
+    var colors=document.querySelector(".colors");
    
         var colors_choice=colors.getElementsByTagName("li");
         
         for (var j=0; j<colors_choice.length; j++) {
           
             colors_choice[j].addEventListener("click", function () {
+                for (var i=0; i<list_panel.length; i++) {
+                list_panel[i].classList.remove("visible");
+                }
+                
                var colors_inner=this.innerText;
                
                var Color= document.querySelector(".Color");
                 Color.innerText=colors_inner;
+                
+                var color=document.querySelector(".color");
+                color.innerText="0";
             })
         }
+    
     var patterns=document.querySelector(".patterns");
    
         var patterns_choice=patterns.getElementsByTagName("li");
@@ -120,12 +142,42 @@ drop.addEventListener("mouseout", function () {
         for (var j=0; j<patterns_choice.length; j++) {
           
             patterns_choice[j].addEventListener("click", function () {
+                for (var i=0; i<list_panel.length; i++) {
+                list_panel[i].classList.remove("visible");
+                }
+                
                var patterns_inner=this.innerText;
                
                var Pattern= document.querySelector(".Pattern");
                Pattern.innerText=patterns_inner;
+                
+              var pattern=document.querySelector(".pattern");
+              pattern.innerText="0";
             })
         }
+    
+    var transport=document.getElementById("transport");
+    transport.addEventListener("change", function () {
+        if (transport.checked) {
+           var Transport=document.querySelector(".Transport");
+           Transport.innerText="Transport";
+           var transport_cost=document.querySelector(".transport");
+           transport_cost.innerText=transport.dataset.price;
+           total.innerText=parseInt(total.innerText)+parseInt(transport.dataset.price);
+         } 
+        
+        else {
+           var Transport=document.querySelector(".Transport");
+           Transport.innerText=" ";
+           var transport_cost=document.querySelector(".transport");
+           transport_cost.innerText=" ";
+           total.innerText=parseInt(total.innerText)-parseInt(transport.dataset.price);
+        }
+    
+        
+    })
+    
+    
  })
 
 

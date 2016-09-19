@@ -154,11 +154,9 @@
                     </ul>
                 </div>
                 <div class="checkbox check-box">
-                    <input type="checkbox" id="transport" data-transport-price="200">
+                    <input type="checkbox" id="transport" data-price="200">
                     <label for="transport">Transport</label>
                 </div>
-                <!--<div class="checkbox"></div>-->
-                <!--<span class="list_label inline_text">Transport</span>-->
             </div>
         </section>
 
@@ -169,7 +167,6 @@
         <section class="summary_part inline">
             <header class="align_right">
                 <h3>PODSUMOWANIE</h3>
-               
             </header>
 
             <div class="summary_panel">
@@ -186,7 +183,7 @@
                     <span class="transport value"></span>
                 </div>
                 <div class="sum_label">SUMA</div>
-                <div class="sum"><strong></strong></div>
+                <div class="sum"><span id="total"></span></div>
             </div>
             <a href="" class="orderbutton">ZAMAWIAM</a>
         </section>
@@ -209,11 +206,10 @@
     <label>
     <textarea name="message" placeholder="Wiadomość"></textarea>
       </label> 
-    <div id="check">
-   <input type="checkbox" id="checkbox1" name="agree" value="" checked="checked">
-    <label for="checkbox1"><span></span> Zgadzam się na przetwarzanie <br> danych osobowych </label> 
-   </div>
-    <br>
+        <div class="checkbox check-box" id="check">
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">Zgadzam się na przetwarzanie <br> danych osobowych</label>
+        </div>
     <input name="submit" type="submit" value="WYŚLIJ">
     </form>
      <div id="redChair">
