@@ -1,7 +1,4 @@
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
  var drop=document.getElementById("drop");
 drop.addEventListener("mouseover", function () {
@@ -110,10 +107,27 @@ drop.addEventListener("mouseout", function () {
                 title.innerText=price;
                 
                 var total=document.getElementById("total");
-                total.innerText=title.innerText;  
+                total.innerText=title.innerText;
+                var transport=document.getElementById("transport");
+    
+                if (transport.checked) {
+                    var Transport=document.querySelector(".Transport");
+                    Transport.innerText="Transport";
+                    var transport_cost=document.querySelector(".transport");
+                    transport_cost.innerText=transport.dataset.price;
+                    total.innerText=parseInt(total.innerText)+parseInt(transport.dataset.price);
+                } 
+        
+                else {
+                    var Transport=document.querySelector(".Transport");
+                    Transport.innerText=" ";
+                    var transport_cost=document.querySelector(".transport");
+                    transport_cost.innerText=" ";
+                    total.innerText=parseInt(total.innerText);
+                }
             })
         }
-  
+    
     var colors=document.querySelector(".colors");
    
         var colors_choice=colors.getElementsByTagName("li");
@@ -173,11 +187,7 @@ drop.addEventListener("mouseout", function () {
            transport_cost.innerText=" ";
            total.innerText=parseInt(total.innerText)-parseInt(transport.dataset.price);
         }
-    
-        
-    })
-    
-    
+    }) 
  })
 
 
