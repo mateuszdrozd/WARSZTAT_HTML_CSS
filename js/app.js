@@ -87,8 +87,9 @@ drop.addEventListener("mouseout", function () {
     
     var model=document.querySelector(".model");
    
-        var model_choice=model.getElementsByTagName("li");
-        
+    var model_choice=model.getElementsByTagName("li");
+    chairPrice=0;
+    transportPrice=0;
         for (var j=0; j<model_choice.length; j++) {
          
             model_choice[j].addEventListener("click", function () {
@@ -107,24 +108,9 @@ drop.addEventListener("mouseout", function () {
                 title.innerText=price;
                 
                 var total=document.getElementById("total");
-                total.innerText=title.innerText;
-                var transport=document.getElementById("transport");
-    
-                if (transport.checked) {
-                    var Transport=document.querySelector(".Transport");
-                    Transport.innerText="Transport";
-                    var transport_cost=document.querySelector(".transport");
-                    transport_cost.innerText=transport.dataset.price;
-                    total.innerText=parseInt(total.innerText)+parseInt(transport.dataset.price);
-                } 
-        
-                else {
-                    var Transport=document.querySelector(".Transport");
-                    Transport.innerText=" ";
-                    var transport_cost=document.querySelector(".transport");
-                    transport_cost.innerText=" ";
-                    total.innerText=parseInt(total.innerText);
-                }
+                chairPrice=title.innerText;
+                total.innerText=parseInt(chairPrice)+parseInt(transportPrice);
+                 
             })
         }
     
@@ -177,7 +163,8 @@ drop.addEventListener("mouseout", function () {
            Transport.innerText="Transport";
            var transport_cost=document.querySelector(".transport");
            transport_cost.innerText=transport.dataset.price;
-           total.innerText=parseInt(total.innerText)+parseInt(transport.dataset.price);
+           transportPrice=transport.dataset.price;
+            
          } 
         
         else {
@@ -185,9 +172,12 @@ drop.addEventListener("mouseout", function () {
            Transport.innerText=" ";
            var transport_cost=document.querySelector(".transport");
            transport_cost.innerText=" ";
-           total.innerText=parseInt(total.innerText)-parseInt(transport.dataset.price);
+           transportPrice=0;
         }
+        
+        total.innerText=parseInt(chairPrice)+parseInt(transportPrice);
     }) 
+
  })
 
 
