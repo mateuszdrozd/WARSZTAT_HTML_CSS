@@ -48,7 +48,7 @@ drop.addEventListener("mouseout", function () {
             }
             
             list[index].classList.add("visible");
-            console.log(index);
+           
         }
     })
     
@@ -62,7 +62,7 @@ drop.addEventListener("mouseout", function () {
             }
             
              list[index].classList.add("visible");
-             console.log(index);
+             
         }
     })
     
