@@ -1,1 +1,5 @@
-# WARSZTAT_HTML_CSS
+# My first project
+
+#html
+#css
+#js

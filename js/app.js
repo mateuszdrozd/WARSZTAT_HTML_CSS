@@ -1,18 +1,18 @@
 
 document.addEventListener("DOMContentLoaded", function () {
- var drop=document.getElementById("drop");
+ var drop = document.getElementById("drop");
 drop.addEventListener("mouseover", function () {
-    var dropdown= document.getElementById("dropdown");
+    var dropdown = document.getElementById("dropdown");
    
     dropdown.classList.remove("invisible_menu")
 });
 drop.addEventListener("mouseout", function () {
-    var dropdown= document.getElementById("dropdown");
+    var dropdown = document.getElementById("dropdown");
    
     dropdown.classList.add("invisible_menu")
 });
     
-  var label= document.querySelectorAll(".label");
+  var label = document.querySelectorAll(".label");
    
        label[0].addEventListener("mouseover", function () {
            label[0].classList.add("disappear");
@@ -32,7 +32,7 @@ drop.addEventListener("mouseout", function () {
        });
     var right = document.getElementById("rightarrow");
     var left = document.getElementById("leftarrow");
-    var picture= document.getElementById("picture");
+    var picture = document.getElementById("picture");
     var list = picture.getElementsByTagName("li");
     var index = 0;
    
@@ -40,33 +40,34 @@ drop.addEventListener("mouseout", function () {
     list[index].classList.add("show");
     right.addEventListener("click", function () {
        
-        list[index].classList = ["visible"];
-        list[index].classList.add("show");
         if (list[index].classList.contains("visible")) {
             list[index].classList.remove("visible");
             index = index + 1;
             if (index === list.length) {
-                index = list.length-1;
+                index = 0;
             }
+            
             list[index].classList.add("visible");
+            console.log(index);
         }
     })
+    
     left.addEventListener("click", function () {
        
-        list[index].classList = ["visible"];
-        list[index].classList.add("show");
         if (list[index].classList.contains("visible")) {
             list[index].classList.remove("visible");
             index = index - 1;
             if (index < 0) {
-                index = 0;
+                index = (list.length-1);
             }
-            list[index].classList.add("visible");
+            
+             list[index].classList.add("visible");
+             console.log(index);
         }
     })
     
-    var list_arrow= document.querySelectorAll(".list_arrow");
-    var list_panel= document.querySelectorAll(".list_panel");
+    var list_arrow = document.querySelectorAll(".list_arrow");
+    var list_panel = document.querySelectorAll(".list_panel");
     
     list_arrow[0].addEventListener("click", function () {
         list_panel[1].classList.remove("visible");
@@ -84,12 +85,11 @@ drop.addEventListener("mouseout", function () {
         list_panel[2].classList.toggle("visible");
         })
     
-    
-    var model=document.querySelector(".model");
+    var model = document.querySelector(".model");
    
-    var model_choice=model.getElementsByTagName("li");
-    chairPrice=0;
-    transportPrice=0;
+    var model_choice = model.getElementsByTagName("li");
+    chairPrice = 0;
+    transportPrice = 0;
         for (var j=0; j<model_choice.length; j++) {
          
             model_choice[j].addEventListener("click", function () {
@@ -97,26 +97,26 @@ drop.addEventListener("mouseout", function () {
                 list_panel[i].classList.remove("visible");
                 }
                 
-               var model_inner=this.innerText;
+               var model_inner = this.innerText;
                 
-               var price= this.dataset.price;
+               var price = this.dataset.price;
                 
-               var Title= document.querySelector(".Title");
-                Title.innerText=model_inner;
+               var Title = document.querySelector(".Title");
+               Title.innerText=model_inner;
                                     
-                var title=document.querySelector(".title");
+                var title = document.querySelector(".title");
                 title.innerText=price;
                 
-                var total=document.getElementById("total");
-                chairPrice=title.innerText;
-                total.innerText=parseInt(chairPrice)+parseInt(transportPrice);
+                var total = document.getElementById("total");
+                chairPrice = title.innerText;
+                total.innerText = parseInt(chairPrice)+parseInt(transportPrice);
                  
             })
         }
     
-    var colors=document.querySelector(".colors");
+    var colors = document.querySelector(".colors");
    
-        var colors_choice=colors.getElementsByTagName("li");
+        var colors_choice = colors.getElementsByTagName("li");
         
         for (var j=0; j<colors_choice.length; j++) {
           
@@ -125,19 +125,19 @@ drop.addEventListener("mouseout", function () {
                 list_panel[i].classList.remove("visible");
                 }
                 
-               var colors_inner=this.innerText;
+               var colors_inner = this.innerText;
                
-               var Color= document.querySelector(".Color");
-                Color.innerText=colors_inner;
+               var Color = document.querySelector(".Color");
+                Color.innerText = colors_inner;
                 
-                var color=document.querySelector(".color");
-                color.innerText="0";
+                var color = document.querySelector(".color");
+                color.innerText = "0";
             })
         }
     
-    var patterns=document.querySelector(".patterns");
+    var patterns = document.querySelector(".patterns");
    
-        var patterns_choice=patterns.getElementsByTagName("li");
+        var patterns_choice = patterns.getElementsByTagName("li");
         
         for (var j=0; j<patterns_choice.length; j++) {
           
@@ -146,36 +146,36 @@ drop.addEventListener("mouseout", function () {
                 list_panel[i].classList.remove("visible");
                 }
                 
-               var patterns_inner=this.innerText;
+               var patterns_inner = this.innerText;
                
-               var Pattern= document.querySelector(".Pattern");
-               Pattern.innerText=patterns_inner;
+               var Pattern = document.querySelector(".Pattern");
+               Pattern.innerText = patterns_inner;
                 
               var pattern=document.querySelector(".pattern");
-              pattern.innerText="0";
+              pattern.innerText = "0";
             })
         }
     
-    var transport=document.getElementById("transport");
+    var transport = document.getElementById("transport");
     transport.addEventListener("change", function () {
         if (transport.checked) {
-           var Transport=document.querySelector(".Transport");
-           Transport.innerText="Transport";
-           var transport_cost=document.querySelector(".transport");
-           transport_cost.innerText=transport.dataset.price;
-           transportPrice=transport.dataset.price;
+           var Transport = document.querySelector(".Transport");
+           Transport.innerText = "Transport";
+           var transport_cost = document.querySelector(".transport");
+           transport_cost.innerText = transport.dataset.price;
+           transportPrice = transport.dataset.price;
             
          } 
         
         else {
-           var Transport=document.querySelector(".Transport");
-           Transport.innerText=" ";
+           var Transport = document.querySelector(".Transport");
+           Transport.innerText = " ";
            var transport_cost=document.querySelector(".transport");
-           transport_cost.innerText=" ";
-           transportPrice=0;
+           transport_cost.innerText = " ";
+           transportPrice = 0;
         }
         
-        total.innerText=parseInt(chairPrice)+parseInt(transportPrice);
+        total.innerText = parseInt(chairPrice)+parseInt(transportPrice);
     }) 
 
  })
