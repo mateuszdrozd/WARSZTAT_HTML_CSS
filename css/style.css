@@ -266,12 +266,13 @@ nav ul li a {
     background-color: #f0f0f0;
 }
 
-.container h3 {
+.container h2 {
     position: relative;
-    color:black;
+    color:#000;
+    font-size: 20px;
 }
 
-h3::after {
+h2::after {
     content:"" ;
     width:300px ;
     height:1px ;
@@ -279,7 +280,7 @@ h3::after {
     border:5px solid #2cc7ad;
     position: absolute;
     top: 20px;
-    left: 1px;
+    left: -1px;
     
 }
 
@@ -314,7 +315,7 @@ h3::after {
 }
 
 
-.white h2{
+.white h3{
     color: #25c49f;
 }
 
@@ -351,7 +352,7 @@ h3::after {
     font-size: 15px;
 }
 
-.blue h2 {
+.blue h3 {
     color: #f7ffff;
 }
 
